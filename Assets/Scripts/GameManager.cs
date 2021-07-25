@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,11 +13,14 @@ public class GameManager : MonoBehaviour
   public Scrollbar scrollbar;
   private bool isInGame;
   public List<int> seq;
+  private int index;
+  private Color before;
 
   private void Awake() {
     isInGame = false;
     seq = new List<int>();
     startButton.interactable = true;
+    index = 0;
   }
 
   private void Update() {
@@ -32,10 +36,25 @@ public class GameManager : MonoBehaviour
       seq.Add(Random.Range(0, 10));
     }
 
-    var str = "";
-    foreach (var s in seq)
-      str += s;
+    index = 0;
+    InvokeRepeating("ChangeColor", 0f, 1f);
+  }
 
-    Debug.Log(str);
+  private void ChangeColor()
+  {
+    if (index < seq.Count)
+    {
+      before = buttons[seq[index]].transform.GetComponent<Renderer>().material.color;
+      buttons[seq[index]].transform.GetComponent<Renderer>().material.color = Color.red;
+      Invoke("Rollback", 0.5f);
+    }
+    else
+      CancelInvoke("ChangeColor");
+  }
+
+  private void Rollback()
+  {
+    buttons[seq[index]].transform.GetComponent<Renderer>().material.color = before;
+    index++;
   }
 }
