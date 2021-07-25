@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class ButtonItem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  private new Renderer renderer;
+  private Color before;
+  public GameManager gameManager;
+  public int index;
 
-    // Update is called once per frame
-    void Update()
+  private void Awake() {
+    renderer = GetComponent<Renderer>();
+    before = renderer.material.color;
+  }
+
+  private void OnMouseDown() {
+    if (gameManager.isAnswering)
+      renderer.material.color = Color.green;
+  }
+
+  private void OnMouseUp() {
+    if (gameManager.isAnswering)
     {
-        
+      gameManager.RegisterAnswer(index);
+      renderer.material.color = before;
     }
+  }
 }
