@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10513857ab77141479f551daa6f5fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 529597382}
+  index: 1
 --- !u!65 &13456320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -374,6 +376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10513857ab77141479f551daa6f5fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 529597382}
+  index: 7
 --- !u!65 &218925961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -651,6 +655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10513857ab77141479f551daa6f5fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 529597382}
+  index: 4
 --- !u!65 &350815157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -833,6 +839,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10513857ab77141479f551daa6f5fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 529597382}
+  index: 8
 --- !u!65 &510653835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1001,6 +1009,9 @@ MonoBehaviour:
   level: {fileID: 529667938}
   startButton: {fileID: 957693741}
   scrollbar: {fileID: 2007310010}
+  seq: 
+  isAnswering: 0
+  answers: 
 --- !u!4 &529597383
 Transform:
   m_ObjectHideFlags: 0
@@ -1154,6 +1165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10513857ab77141479f551daa6f5fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 529597382}
+  index: 0
 --- !u!65 &530665288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1426,6 +1439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10513857ab77141479f551daa6f5fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 529597382}
+  index: 3
 --- !u!65 &849398359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1745,6 +1760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10513857ab77141479f551daa6f5fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 529597382}
+  index: 2
 --- !u!65 &1051217338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1851,6 +1868,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10513857ab77141479f551daa6f5fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 529597382}
+  index: 5
 --- !u!65 &1711572777
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1957,6 +1976,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10513857ab77141479f551daa6f5fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 529597382}
+  index: 6
 --- !u!65 &1832342906
 BoxCollider:
   m_ObjectHideFlags: 0
